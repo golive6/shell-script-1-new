@@ -43,7 +43,6 @@ VALIDATE $? "Copied backend service file"
 systemctl daemon-reload &>>$LOGFILE
 VALIDATE $? "Daemon reloading"
 
-
 systemctl start backend &>>$LOGFILE
 VALIDATE $? "Starting backend"
 
