@@ -13,7 +13,7 @@ systemctl start nginx &>>$LOGFILE
 VALIDATE $? "Starting Nginx"
 
 rm -rf /usr/share/nginx/html/* &>>$LOGFILE
-VALIDATE "Removing existing content"
+VALIDATE $? "Removing existing content"
 
 curl -o /tmp/frontend.zip https://expense-builds.s3.us-east-1.amazonaws.com/expense-frontend-v2.zip &>>$LOGFILE
 VALIDATE $? "Downloading frontend code"
