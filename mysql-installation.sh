@@ -3,7 +3,6 @@
 source ./common.sh
 check_root
 
-
 echo "Please enter DB Password:"
 read -s mysql_root_password
 
